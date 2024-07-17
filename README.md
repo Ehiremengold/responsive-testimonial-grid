@@ -14,6 +14,6 @@ Welcome to this **Responsive Testimonial Grid** project! This repository contain
 <img src="screenshots/laptop.png"/>
 
 <div style="display: flex;  margin-top: 40px;">
-  <img src="screenshots/tab.png"  width="700" height="800" style="margin-right: 200px"/>
+  <img src="screenshots/tab.png"  width="500" height="800" style="margin-right: 80px"/>
   <img src="screenshots/phone.png"  width="400"/>
 </div>
