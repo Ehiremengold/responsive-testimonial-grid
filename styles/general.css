@@ -1,0 +1,151 @@
+:root {
+  --body-font-family: "Barlow Semi Condensed";
+  --purple-color: hsl(263, 55%, 52%);
+  --grayish-blue: hsl(217, 19%, 35%);
+  --darkish-blue: hsl(219, 29%, 14%);
+  --light-gray: hsl(0, 0%, 81%);
+  --body-bg-color: hsl(210, 46%, 95%);
+  --light-font-weight: 300;
+  --medium-font-weight: 500;
+  --strong-font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  max-width: 100%;
+  width: 2100px;
+}
+
+.testimonial-container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 5rem auto;
+  /* border: 1px solid red; */
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .testimonial-container{
+    grid-template-columns: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  .testimonial-container{
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr; */
+  }
+  .col-3{
+    order: 5;
+  }
+}
+
+.testimonial {
+  font-family: var(--body-font-family);
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 5px;
+}
+.col-1 {
+  position: relative;
+  grid-column: span 2;
+  background-color: var(--purple-color);
+}
+
+.col-1 .title,
+.col-1 .story,
+.col-1 .user-info{
+  z-index: 1;
+}
+.quote-icon {
+  top: 0;
+  right: 20px;
+  position: absolute;
+  /* z-index: -1; */
+}
+
+.col-2 {
+  background-color: var(--grayish-blue);
+}
+.col-3 {
+  background-color: #fff;
+  grid-row: span 2;
+}
+.col-3 .username,
+.col-3 .story,
+.col-3 .user-position,
+.col-3 .title,
+.col-4 .story,
+.col-4 .user-position,
+.col-4 .username,
+.col-4 .title {
+  color: var(--grayish-blue);
+}
+.col-4 {
+  background-color: #fff;
+}
+.col-5 {
+  background-color: var(--darkish-blue);
+  grid-column: span 2;
+}
+.user-info-details {
+  display: flex;
+  align-items: top;
+  margin-bottom: .5rem;
+}
+
+.user-img-div {
+  margin-right: .5em;
+}
+.user-img-div img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+/* .user-img {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  object-fit: cover;
+} */
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+.username,
+.user-position {
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.username {
+  color: #fff;
+  font-weight: var(--medium-font-weight);
+}
+.user-position {
+  color: var(--light-gray);
+  font-weight: var(--light-font-weight);
+}
+
+.title {
+  font-weight: var(--strong-font-weight);
+  color: white;
+  margin-bottom: 1em;
+  font-size: 1.25rem;
+}
+
+.story {
+  color: var(--light-gray);
+  font-weight: var(--light-font-weight);
+}
